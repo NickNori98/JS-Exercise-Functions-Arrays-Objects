@@ -141,10 +141,12 @@ function getName(nick) {
  * passing in [ 'orange', 'grape', 'apple', 'banana', 'mango' ] as the argument,
  * the returned value should be: 2.
 */
-function appleIndex(/* code here */) {
-  /* code here */
-}
-
+function appleIndex(Array) {
+  for (let i = 0; i < Array.length; i++) {
+    if (Array[i] === "apple") {
+      return i; 
+    }
+  }
 /**
  * ### Challenge `isItAnApple`
  * 
@@ -160,8 +162,16 @@ function appleIndex(/* code here */) {
  * passing in [ 'orange', 'apple', 'banana', 'apples', 'apple', 'mango' ] as the argument,
  * the returned value should be: [ false, true, false, false, true, false ].
 */
-function isItAnApple(/* code here */) {
-  /* code here */
+function isItAnApple(Array) {
+  let w =[]
+  for (let i = 0; i < Array.length; i++) {
+    if (Array[i] === "apple") {
+       w.push(true);
+    } else {
+       w.push(false);
+    }
+  }
+  return w;
 }
 
 
@@ -354,4 +364,5 @@ if (typeof exports !== 'undefined') {
   if (getOlderCars) { module.exports.getOlderCars = getOlderCars }
   if (getGermanCars) { module.exports.getGermanCars = getGermanCars }
  
+}
 }
